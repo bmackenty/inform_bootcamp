@@ -18,9 +18,24 @@ To the west you can see an open bucolic field.".
 instead of going nowhere in pasture:
 	say "The fence blocks your path.".
 	
+	[---------- old bench ------------]
+	An old large bench is a supporter in the Pasture. "A large weathered work bench stands outside the fence. Old useless rusty metal tools are scattered on top of the table."
+	
+	The description of the old large bench is "The old work bench looks to have once been used to hold tools and equipment work on the massive fence which surrounds the pasture. There seems to also be some old rusty tools which may have been used for basic carpentry tasks.".
+
+
+	[-- yoke --]	
+	A yoke is in the large wooden crate.
+	The description of the yoke is "A large piece of wood with two identations where it fits onto the back of the Oxens neck. The yoke is of exquisite construction, with delicate and elegant carvings made upon the wood. There are two large u-shaped pieces of wood which fit under an oxen neck and connect to the heavy yoke. They are also made of an exquisite quality. Finally, there is a metal ring set in the bottom-middle of the yoke. It looks to be made of gold with even more intricate carvings.".
+	
+	[-- old crate --]
+	A large wooden crate is an closed openable container on old large bench. 
+		
+	The description of large wooden crate is "The crate is of a different construction from the table and fence; it seems to be more ornate and of high quality. It has not suffered the damage from time, neglect and weather which the bench and fence have."
+	
 [========== old road ==========]
 The printed name of old road is "Dusty old country road".
-The description of old road is "You stand on an old dusty country road. A thin swatch of grass runs along the middle of the road.
+The description of old road is "You stand on an old dusty country road. A swatch of grass defines the median along the middle of the road.
 
 To the south you can see an open bucolic field, and to the north an old decrepit wooden church.".
 instead of going nowhere in old road:
@@ -31,8 +46,10 @@ An oldChurch is north of old road.
 [========== old church ==========]
 
 The printed name of oldChurch is "An small old decrepit wooden country church".
-The description of oldChurch is "Peeling fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty christian cross sits atop the spire".
+The description of oldChurch is "Peeling fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty christian cross sits atop the spire. You can go in to the church from here.".
 instead of going nowhere in oldChurch:
 	say "There are no obvious pathways, save for the old road to the south, and the entrance to the church.".
 
 
+[======== in old church =======]
+[not yet.....]
