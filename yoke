@@ -65,7 +65,7 @@ pew is scenery.
 The description of pew is "Long wooden benches for sitting during a church service. The pews look to hold about 6 adults each. ".
 
 understand "yoke" as carving.
-carving is inside church.
+carving is inside insideOldChurch.
 carving is scenery.
 The description of carving is "a simple carving of a yoke".
 
