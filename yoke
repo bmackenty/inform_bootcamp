@@ -1,0 +1,38 @@
+"Yoke" by Bill MacKenty
+
+
+[========== open field ==========]
+An Open Field is a room. 
+	An Old road is north of Open Field. 
+	A Pasture is east of Open Field. 
+
+The description of Open Field is "[if unvisited]A large grassy field with wildflowers and a collection of different grasses commonly found in New England; timothy, brome, orchardgrass, tall fescue, and bermudagrass. There is an old country road meandering to the north. To the east near the crest of a hill some animals peacefully graze. [else]A familiar field with a road to the north and a pasture to the east.". 
+Instead of going nowhere in Open Field:
+	say "Although large and beautiful, there may be other things worth seeing here."
+
+
+[========== pasture ==========]
+The description of Pasture is "A large pasture ringed by an old wooden fence. There is a gate to the north. There are several large oxen in the pasture, grazing, using their tails to shoo away flies, or simply laying on the ground. As you approach some of them notice you and turn their attention (and ears) in your direction.
+
+To the west you can see an open bucolic field.".
+instead of going nowhere in pasture:
+	say "The fence blocks your path.".
+	
+[========== old road ==========]
+The printed name of old road is "Dusty old country road".
+The description of old road is "You stand on an old dusty country road. A thin swatch of grass runs along the middle of the road.
+
+To the south you can see an open bucolic field, and to the north an old decrepit wooden church.".
+instead of going nowhere in old road:
+	say "Although tempting to meander off, you think it better to stay on the road.".
+An oldChurch is north of old road.
+
+
+[========== old church ==========]
+
+The printed name of oldChurch is "An small old decrepit wooden country church".
+The description of oldChurch is "Peeling fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty christian cross sits atop the spire".
+instead of going nowhere in oldChurch:
+	say "There are no obvious pathways, save for the old road to the south, and the entrance to the church.".
+
+
