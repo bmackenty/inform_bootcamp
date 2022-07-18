@@ -26,7 +26,7 @@ instead of going nowhere in pasture:
 
 	[-- yoke --]	
 	A yoke is in the large wooden crate.
-	The description of the yoke is "A large piece of wood with two identations where it fits onto the back of the Oxens neck. The yoke is of exquisite construction, with delicate and elegant carvings made upon the wood. There are two large u-shaped pieces of wood which fit under an oxen neck and connect to the heavy yoke. They are also made of an exquisite quality. Finally, there is a metal ring set in the bottom-middle of the yoke. It looks to be made of gold with even more intricate carvings.".
+	The description of the yoke is "A large piece of wood with two identations where it fits onto the back of the oxens neck. The yoke is of exquisite construction, with delicate and elegant carvings in the wood. There are two large u-shaped pieces of wood which fit under an oxen neck and connect to the heavy yoke. They are also made of an exquisite quality. Finally, there is a metal ring set in the bottom-middle of the yoke. It looks to be made of brass with even more intricate carvings in the metal.".
 	
 	[-- old crate --]
 	A large wooden crate is an closed openable container on old large bench. 
@@ -46,16 +46,41 @@ An oldChurch is north of old road.
 [========== old church ==========]
 
 The printed name of oldChurch is "Outside of a small old decrepit wooden country church".
-The description of oldChurch is "Peeling and fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty christian cross sits atop the spire. You can go in to the church from here.".
+The description of oldChurch is "Peeling and fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty christian cross sits atop the spire. 
+
+You can go in to the church from here.".
 instead of going nowhere in oldChurch:
 	say "There are no obvious pathways save for the old road to the south, and the entrance to the church.".
 
 [======== in old church =======]
 insideOldChurch is inside of oldChurch.
 The printed name of insideOldChurch is "Inside the Church of the Yoke".
-The description of insideOldChurch is "You are standing in a one room church. It is remarkably clean (considering the delapidated condition of the exterior). There are 10 rows of wooden pews on each side of the church. There is a wooden altar in the front with a simple wooden cross afixed the wall behind. There is a yoke carved in the front of the altar, under which is carved 'my yoke is easy and my burden is light'. 
+The description of insideOldChurch is "You are standing in a one room church. It is remarkably clean (considering the delapidated condition of the exterior). There are seven rows of wooden pews on each side of the church. There is a wooden altar in the front with a simple wooden cross afixed the wall behind. There is a yoke carved in the front of the altar, under which is carved the words 'my yoke is easy and my burden is light'. 
 
 You can leave the church by going OUT. ".
+
+understand "pews" as pew.
+pew is in insideOldChurch.
+pew is scenery.
+The description of pew is "Long wooden benches for sitting during a church service. The pews look to hold about 6 adults each. ".
+
+understand "yoke" as carving.
+carving is inside church.
+carving is scenery.
+The description of carving is "a simple carving of a yoke".
+
+
+
+
+A table is a supporter in insideoldChurch. "A table stands near the entrance of the church. There is a wooden bowl on the table, and a hand-written sign which reads 'please feel free to eat the fruit'.".
+The description of table is "A hand-carved table. it looks rather old but well-cared for.".
+a bowl is an open scenery container on the table.
+The printed name of bowl is "simple hand-carved wooden bowl".
+fruit is in the bowl.
+fruit is edible.
+the printed name of fruit is "fresh fruit".
+the description of fruit is  "Fresh strawberries, blueberries, green grapes, melon and oranges are mixed together in a sweet and refreshing fruit salad.".
+
 
 [----priest npc code here---]
 
