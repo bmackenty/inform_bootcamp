@@ -45,11 +45,21 @@ An oldChurch is north of old road.
 
 [========== old church ==========]
 
-The printed name of oldChurch is "An small old decrepit wooden country church".
-The description of oldChurch is "Peeling fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty christian cross sits atop the spire. You can go in to the church from here.".
+The printed name of oldChurch is "Outside of a small old decrepit wooden country church".
+The description of oldChurch is "Peeling and fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty christian cross sits atop the spire. You can go in to the church from here.".
 instead of going nowhere in oldChurch:
-	say "There are no obvious pathways, save for the old road to the south, and the entrance to the church.".
-
+	say "There are no obvious pathways save for the old road to the south, and the entrance to the church.".
 
 [======== in old church =======]
-[not yet.....]
+insideOldChurch is inside of oldChurch.
+The printed name of insideOldChurch is "Inside the Church of the Yoke".
+The description of insideOldChurch is "You are standing in a one room church. It is remarkably clean (considering the delapidated condition of the exterior). There are 10 rows of wooden pews on each side of the church. There is a wooden altar in the front with a simple wooden cross afixed the wall behind. There is a yoke carved in the front of the altar, under which is carved 'my yoke is easy and my burden is light'. 
+
+You can leave the church by going OUT. ".
+
+[----priest npc code here---]
+
+
+
+
+
