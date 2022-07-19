@@ -90,7 +90,10 @@ A tree is scenery.
 
 [======== fairy house ===========]
 A czarodziejkaHouse is in the Tree.
-The printed name of czarodziejkaHouse is "Czarodziejka Dom (char-o-je-ka)".
+czarodziejkaHouse is scenery.
+The printed name of czarodziejkaHouse is "A place for the other folk.".
+
+The description of the tree is  "This ancient tree is massive. It's branches extend broadly and fully, creating a comforting shade in the warm sun. A tree of this age is usually granted a name, but you are not sure what it might be.  Carefully looking at the bark you can't help but notice a small door inlaid into the tree!".
 
 
 [========== old church ==========]
