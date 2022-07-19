@@ -1,38 +1,69 @@
 "Yoke" by Bill MacKenty
 
+The player is wearing denim jeans.
+The player is wearing a comfortable old shirt.
+The player is wearing a pair of sturdy boots.
+The player is wearing a straw hat.
 
 [========== open field ==========]
 An Open Field is a room. 
 	An Old road is north of Open Field. 
-	A Pasture is east of Open Field. 
+	A outsidePasture is east of Open Field. 
 
 The description of Open Field is "[if unvisited]A large grassy field with wildflowers and a collection of different grasses commonly found in New England; timothy, brome, orchardgrass, tall fescue, and bermudagrass. There is an old country road meandering to the north. To the east near the crest of a hill some animals peacefully graze. [else]A familiar field with a road to the north and a pasture to the east.". 
 Instead of going nowhere in Open Field:
-	say "Although large and beautiful, there may be other things worth seeing here."
+	say "Although large and beautiful, there may be other things worth seeing here..."
 
 
 [========== pasture ==========]
-The description of Pasture is "A large pasture ringed by an old wooden fence. There is a gate to the north. There are several large oxen in the pasture, grazing, using their tails to shoo away flies, or simply laying on the ground. As you approach some of them notice you and turn their attention (and ears) in your direction.
+The description of outsidePasture is "You stand outside a large pasture ringed by an old split-rail wooden fence. There is a gate to the north. There are several large oxen in the pasture, grazing, using their tails to shoo away flies, or simply laying on the ground. 
 
-To the west you can see an open bucolic field.".
-instead of going nowhere in pasture:
+	As you approach some of the oxen notice you and turn their attention (and ears) in your direction.
+
+To the west you can see an open bucolic field. You can enter the pasture.".
+
+the printed name of outsidePasture is "Outside the pasture".
+
+instead of going nowhere in outsidePasture:
 	say "The fence blocks your path.".
 	
 	[---------- old bench ------------]
-	An old large bench is a supporter in the Pasture. "A large weathered work bench stands outside the fence. Old useless rusty metal tools are scattered on top of the table."
+	An old large bench is a supporter in the outsidePasture. "A large weathered workbench stands outside the fence. A large wooden crate rests atop the workbench"
 	
-	The description of the old large bench is "The old work bench looks to have once been used to hold tools and equipment work on the massive fence which surrounds the pasture. There seems to also be some old rusty tools which may have been used for basic carpentry tasks.".
+	The description of the old large bench is "The old workbench looks to have once been used to hold tools and equipment work on the massive fence which surrounds the pasture. There is a large wooden crate on top of the workbench.".
 
 
 	[-- yoke --]	
 	A yoke is in the large wooden crate.
-	The description of the yoke is "A large piece of wood with two identations where it fits onto the back of the oxens neck. The yoke is of exquisite construction, with delicate and elegant carvings in the wood. There are two large u-shaped pieces of wood which fit under an oxen neck and connect to the heavy yoke. They are also made of an exquisite quality. Finally, there is a metal ring set in the bottom-middle of the yoke. It looks to be made of brass with even more intricate carvings in the metal.".
+	A yoke is wearable.
+	The description of the yoke is "A long piece of heavy wood with two identations where it fits onto the back of the oxens neck. The yoke is of exquisite construction, with delicate and elegant carvings in the wood. There are two large u-shaped pieces of wood which fit under an oxen neck and connect to the heavy yoke. They are also made of an exquisite quality. Finally, there is a metal ring set in the bottom-middle of the yoke. It looks to be made of brass with even more intricate carvings in the metal.".
 	
 	[-- old crate --]
-	A large wooden crate is an closed openable container on old large bench. 
+	A large wooden crate is an closed openable scenery container on old large bench. 
+	A large wooden crate is fixed in place. 
 		
-	The description of large wooden crate is "The crate is of a different construction from the table and fence; it seems to be more ornate and of high quality. It has not suffered the damage from time, neglect and weather which the bench and fence have."
+	The description of large wooden crate is "The crate is of a different construction from the workbench and fence; it seems to be more ornate and of higher quality than the workbench. It has not suffered the damage from time, neglect and weather which the bench and fence have."
 	
+
+[=== inside pasture ===]
+insidePasture is inside from outsidePasture. 
+The description of insidePasture is "You are standing in a large open pasture. An old wooden split-rail fence defines the boundary of the pasture. 
+
+The oxen, curiousity piqued by your arrival outside of the pasture, take a decidedly more active interest in your presence inside the pasture. Some of the oxen stand up, others lift their noses to better smell you, and a few of them take a few tentative steps towards you. 
+
+
+You can exit the pasture.".
+
+fauxInsidePasture is a scenery, enterable container in outsidePasture. 
+the printed name of fauxInsidePasture is "Pasture".
+the printed name of insidePasture is "Pasture".
+
+understand "pasture" as fauxInsidePasture.
+
+instead of entering fauxInsidePasture:
+	try going inside.
+	
+
 [========== old road ==========]
 The printed name of old road is "Dusty old country road".
 The description of old road is "You stand on an old dusty country road. A swatch of grass defines the median along the middle of the road.
@@ -46,7 +77,7 @@ An oldChurch is north of old road.
 [========== old church ==========]
 
 The printed name of oldChurch is "Outside of a small old decrepit wooden country church".
-The description of oldChurch is "Peeling and fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty christian cross sits atop the spire. 
+The description of oldChurch is "Peeling and fading paint falls from the walls of this church which has clearly seen better days. The grass around the church is closely trimmed, and the windows seem clean. The steeple of the church looks ready to fall, and a rusty Christian cross sits atop the spire. 
 
 You can go in to the church from here.".
 instead of going nowhere in oldChurch:
@@ -83,8 +114,4 @@ the description of fruit is  "Fresh strawberries, blueberries, green grapes, mel
 
 
 [----priest npc code here---]
-
-
-
-
 
