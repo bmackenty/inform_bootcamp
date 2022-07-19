@@ -15,16 +15,19 @@ The description of Open Field is "[if unvisited]A large grassy field with wildfl
 Instead of going nowhere in Open Field:
 	say "Although large and beautiful, there may be other things worth seeing here...".
 Instead of eating grass:
-	say "You attempt to chew and eat the grass, however, since you are not a cow, your efforts are largely unsuccessful.".
+	say "You attempt to chew and eat the grass, however, since you are not a cow, your efforts are largely unsuccessful.";
+	now the description of the player is "Grass is stuck to and sticking out of many of your teeth. The effect is you now look like a horse / cow / farm animal with unbelievable  dental deficiency.".
 	
 
 [========== pasture ==========]
 The description of outsidePasture is "[if unvisited]You stand outside a large pasture ringed by an old split-rail wooden fence. There is a gate to the north. There are several large oxen in the pasture - grazing, using their tails to shoo away flies, or simply laying on the ground. 
-	
 
-	As you approach some of the oxen notice you and turn their attention (and ears) in your direction.
+To the west you can see an open bucolic field. You can enter the pasture. [else]Returning to the pasture, you see several oxen lazily grazing. You can enter the pasture.[end if]
 
-To the west you can see an open bucolic field. You can enter the pasture. [else]Returning to the pasture, you see several oxen lazily grazing. You can enter the pasture.".
+	[if insidePasture is visited]
+	The oxen, wary and suspicious of your presence after having entered their pasture, continue to carefully monitor your movements and actions. They look at you and monitor your movements and actions. 
+	[else]
+	The oxen become curious and casually alert to your arrival. Some of them stop grazing and stare at you, while others adjust their ears to better detect the sounds you make. ".
 
 the printed name of outsidePasture is "Outside the pasture".
 
@@ -74,12 +77,20 @@ instead of taking oxe:
 
 [========== old road ==========]
 The printed name of old road is "Dusty old country road".
-The description of old road is "You stand on an old dusty country road. A swatch of grass defines the median along the middle of the road.
+The description of old road is "You stand on an old dusty country road. A swatch of grass defines the median along the middle of the road. There is a very large and old linden tree here. Its branches and foliage providing comforting shade. 
 
 To the south you can see an open bucolic field, and to the north an old decrepit wooden church.".
 instead of going nowhere in old road:
 	say "Although tempting to meander off, you think it better to stay on the road.".
 An oldChurch is north of old road.
+
+A tree is in old road.
+A tree is scenery. 
+
+
+[======== fairy house ===========]
+A czarodziejkaHouse is in the Tree.
+The printed name of czarodziejkaHouse is "Czarodziejka Dom (char-o-je-ka)".
 
 
 [========== old church ==========]
