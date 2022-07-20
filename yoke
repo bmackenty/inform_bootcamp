@@ -11,7 +11,7 @@ An Open Field is a room.
 	A outsidePasture is east of Open Field. 
 	grass is scenery in Open Field.
 
-The description of Open Field is "[if unvisited]A large grassy field with wildflowers and a collection of different grasses commonly found in New England; timothy, brome, orchardgrass, tall fescue, and bermudagrass. There is an old country road meandering to the north. To the east near the crest of a hill some animals peacefully graze. [else]A familiar field with an old country road to the north and a pasture to the east.". 
+The description of Open Field is "[if unvisited]A large grassy field with wildflowers and a collection of different grasses commonly found in New England; timothy, brome, orchardgrass, tall fescue, and bermudagrass. There is an old country road meandering to the north. To the east near the crest of a hill some animals peacefully graze within the confines of a pasture.. [else]A familiar field with an old country road to the north and a pasture to the east.". 
 Instead of going nowhere in Open Field:
 	say "Although large and beautiful, there may be other things worth seeing here...".
 Instead of eating grass:
@@ -24,10 +24,8 @@ The description of outsidePasture is "[if unvisited]You stand outside a large pa
 
 To the west you can see an open bucolic field. You can enter the pasture. [else]Returning to the pasture, you see several oxen lazily grazing. You can enter the pasture.[end if]
 
-	[if insidePasture is visited]
-	The oxen, wary and suspicious of your presence after having entered their pasture, continue to carefully monitor your movements and actions. They look at you and monitor your movements and actions. 
-	[else]
-	The oxen become curious and casually alert to your arrival. Some of them stop grazing and stare at you, while others adjust their ears to better detect the sounds you make. ".
+	[if insidePasture is visited]The oxen, wary and suspicious of your presence after having entered their pasture, continue to carefully monitor your movements and actions. They look at you and monitor your movements and actions. 
+	[else]The oxen become curious and casually alert to your arrival. Some of them stop grazing and stare at you, while others adjust their ears to better detect the sounds you make. ".
 
 the printed name of outsidePasture is "Outside the pasture".
 
@@ -37,8 +35,24 @@ instead of going nowhere in outsidePasture:
 	[---------- old bench ------------]
 	An old large bench is a supporter in the outsidePasture. "A large weathered workbench stands outside the fence. A large wooden crate rests atop the workbench"
 	
-	The description of the old large bench is "The old workbench looks to have once been used to hold tools and equipment work on the massive fence which surrounds the pasture. There is a large wooden crate on top of the workbench.".
+	The description of the old large bench is "The old workbench looks to have once been used to hold tools and equipment work on the massive fence which surrounds the pasture. There is a large wooden crate on top of the workbench and many rusty old tools.".
 
+	a key unlocks the large wooden crate.
+	tools are scenery container on old bench. 
+	Understand "tools" and "rusty tools" and "old tools" and "useless tools" as tools.
+	instead of examining tools for the first time:
+		say "There is large pile of rusty carpentry tools. Hammers, saw, pliers, squares, and files - all rusty and useless. As you look through the large pile of rusty useless tools you realize it certainly isn't worth looking through the tools again.";
+		stop the action. 
+		
+	instead of examining the tools for the second time:
+		say "Not much has changed since you first looked through the tools. The oxen, watching you look through the rusty tools, seem grateful this is your last and final time searching through the tools. Although fairly hard to read the emotional cues from oxen,  you are pretty sure they are relieved you are done searching through the tools. You start to feel relaxed and spirtually fulfilled knowing there isn't anything else to see in the pile of rusty tools.";
+		stop the action.
+		
+	instead of examining the tools for the third time:
+		say "Fine. You win. As you poke around the rusty tools, you can't help but notice an elegantly made key. You've never seen a key like this before, and can't image what sort of lock it might fit. ";
+		now the key is in the tools;
+		stop the action.
+		
 
 	[-- yoke --]	
 	A yoke is in the large wooden crate.
@@ -46,10 +60,10 @@ instead of going nowhere in outsidePasture:
 	The description of the yoke is "A long piece of heavy wood with two identations where it fits onto the back of the oxens neck. The yoke is of exquisite construction, with delicate and elegant carvings in the wood. There are two large u-shaped pieces of wood which fit under an oxen neck and connect to the heavy yoke. They are also made of an exquisite quality. Finally, there is a metal ring set in the bottom-middle of the yoke. It looks to be made of brass with even more intricate carvings in the metal.".
 	
 	[-- old crate --]
-	A large wooden crate is an closed openable scenery container on old large bench. 
+	A large wooden crate is an closed openable locked scenery container on old large bench. 
 	A large wooden crate is fixed in place. 
 		
-	The description of large wooden crate is "The crate is of a different construction from the workbench and fence; it seems to be more ornate and of higher quality than the workbench. It has not suffered the damage from time, neglect and weather which the bench and fence have."
+	The description of large wooden crate is "The crate is of a different construction from the workbench and fence; it seems to be more ornate and of higher quality than the workbench. It has not suffered the damage from time, neglect and weather which the bench and fence have. There is a strong, exquisitely made lock on the crate.".
 	
 
 [=== inside pasture ===]
@@ -76,6 +90,7 @@ instead of taking oxe:
 	end the story finally saying "As you attempt to pick up the 1000kg oxe, you learn a final and important lesson about anger, physics, mass, and sharp horns.".
 
 [========== old road ==========]
+
 The printed name of old road is "Dusty old country road".
 The description of old road is "You stand on an old dusty country road. A swatch of grass defines the median along the middle of the road. There is a very large and old linden tree here. Its branches and foliage providing comforting shade. 
 
@@ -84,16 +99,24 @@ instead of going nowhere in old road:
 	say "Although tempting to meander off, you think it better to stay on the road.".
 An oldChurch is north of old road.
 
+
+[=========== tree ============]
 A tree is in old road.
 A tree is scenery. 
 
 
+The description of the tree is  "This ancient tree is massive. It's branches extend broadly and fully, creating a comforting shade in the warm sun. A tree of this age is usually granted a name, but you are not sure what it might be.  Carefully looking at the bark you can't help but notice a small simple door inlaid into the tree. The door is quite small, and seems to be about 4 meters above ground.".
+
+instead of climbing the tree:
+	say "The tree is too difficult to climb.".
+
+
 [======== fairy house ===========]
-A czarodziejkaHouse is in the Tree.
-czarodziejkaHouse is scenery.
+A czarodziejkaHouse is a room.
 The printed name of czarodziejkaHouse is "A place for the other folk.".
 
-The description of the tree is  "This ancient tree is massive. It's branches extend broadly and fully, creating a comforting shade in the warm sun. A tree of this age is usually granted a name, but you are not sure what it might be.  Carefully looking at the bark you can't help but notice a small door inlaid into the tree!".
+
+
 
 
 [========== old church ==========]
@@ -121,7 +144,7 @@ The description of pew is "Long wooden benches for sitting during a church servi
 understand "yoke" as carving.
 carving is inside insideOldChurch.
 carving is scenery.
-The description of carving is "a simple carving of a yoke".
+The description of carving is "Carved into the front of the altar is a picture of a yoke".
 
 
 
