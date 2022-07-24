@@ -1,22 +1,48 @@
 "Yoke" by Bill MacKenty
 
+understand "pick [something]" and "grab [something]" as taking.
+a thing can be undrinkable or drinkable.
+a thing is usually undrinkable. 
+
+The block drinking rule is not listed in the check drinking rulebook. 
+
+Check drinking:
+	if noun is undrinkable:
+		say "That doesn't seem to be something you can imbibe!";
+		stop the action.
+
+Carry out drinking:
+	now noun is nowhere;
+	say "you drink [noun].".
+		
+
+
 The player is wearing denim jeans.
 The player is wearing a comfortable old shirt.
 The player is wearing a pair of sturdy boots.
 The player is wearing a straw hat.
 
+
 [========== open field ==========]
 An Open Field is a room. 
 	An Old road is north of Open Field. 
 	A outsidePasture is east of Open Field. 
-	grass is scenery in Open Field.
+	wildflower is scenery in Open Field.
+	the description of wildflower is  "Among the beautiful assortment of wildflowers, you spot Blue Wild Indigo (Baptisia australis),  Sweet Joe Pye Weed (Eutrochium purpureum), and Pale Purple Coneflower (Echinacea pallida). There are other wildflowers and grasses of course, but those are the one's you can identify.".
+	understand "flower" and "flowers" and "wild" and "wildflowers" as wildflower.
 
-The description of Open Field is "[if unvisited]A large grassy field with wildflowers and a collection of different grasses commonly found in New England; timothy, brome, orchardgrass, tall fescue, and bermudagrass. There is an old country road meandering to the north. To the east near the crest of a hill some animals peacefully graze within the confines of a pasture.. [else]A familiar field with an old country road to the north and a pasture to the east.". 
+The description of Open Field is "[if unvisited]You stand in a large grassy field dotted with wildflowers commonly found in rural New England during the summer. There is an old country road meandering to the north. To the east near the crest of a hill some animals peacefully graze within the confines of a pasture.
+
+It is sunny and hot (28 degrees celcius).
+[else]A familiar field with an old country road to the north and a pasture to the east.
+". 
 Instead of going nowhere in Open Field:
 	say "Although large and beautiful, there may be other things worth seeing here...".
-Instead of eating grass:
-	say "You attempt to chew and eat the grass, however, since you are not a cow, your efforts are largely unsuccessful.";
+Instead of eating wildflower:
+	say "You attempt to chew and eat the wildflowers, however, since you are not a cow, your efforts are largely unsuccessful.";
 	now the description of the player is "Grass is stuck to and sticking out of many of your teeth. The effect is you now look like a horse / cow / farm animal with unbelievable  dental deficiency.".
+instead of taking wildflower:
+	say "Although tempting, you remember that nature is best left to herself, and the flowers should be enjoyed by everyone.". 
 	
 
 [========== pasture ==========]
@@ -35,7 +61,7 @@ instead of going nowhere in outsidePasture:
 	[---------- old bench ------------]
 	An old large bench is a supporter in the outsidePasture. "A large weathered workbench stands outside the fence. A pile of rusty old tools and a large wooden crate rests atop the workbench"
 	
-	The description of the old large bench is "The old workbench looks to have once been used to hold tools and equipment work on the massive fence which surrounds the pasture. There is a large wooden crate on top of the workbench and many rusty old tools.".
+	The description of the old large bench is "The old workbench looks to have once been used to hold tools and equipment to work on the massive fence which surrounds the pasture. There is a large wooden crate on top of the workbench and many rusty old tools.".
 
 	a key unlocks the large wooden crate.
 	tools are scenery container on old bench. 
@@ -145,9 +171,8 @@ carving is scenery.
 The description of carving is "Carved into the front of the altar is a picture of a yoke".
 
 
-
-A table is a supporter in insideoldChurch. "A table stands near the entrance of the church. There is a wooden bowl on the table, and a hand-written sign which reads 'please feel free to eat the fruit'.".
-The description of table is "A hand-carved table. it looks rather old but well-cared for.".
+A table is a supporter in insideoldChurch. "A table stands near the entrance of the church. There is a wooden bowl on the table, and a glass of lemonade. A hand-written sign reads 'please feel free to eat the fruit and drink the water'.".
+The description of table is "A wooden table. it looks rather old but well-cared for.".
 a bowl is an open scenery container on the table.
 The printed name of bowl is "simple hand-carved wooden bowl".
 fruit is in the bowl.
@@ -155,6 +180,15 @@ fruit is edible.
 the printed name of fruit is "fresh fruit".
 the description of fruit is  "Fresh strawberries, blueberries, green grapes, melon and oranges are mixed together in a sweet and refreshing fruit salad.".
 
+
+a glass is an undescribed thing  on the table.
+the printed name of glass is "drinking glass".  
+refreshingLemonade is part of glass.
+the printed name of refreshingLemonade is "refreshing lemonade.".
+refreshingLemonade is drinkable. 
+understand "lemonade" as refreshingLemonade.
+
+	
 instead of taking bowl:
 	say "The bowl belongs to the church and should probably not be taken.".
 	
@@ -165,4 +199,3 @@ instead of eating fruit:
 	say "Delicious! You can't recall the last time you tasted such delicious fruit.".
 
 [----priest npc code here---]
-
