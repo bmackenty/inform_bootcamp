@@ -15,7 +15,30 @@ Carry out drinking:
 	now noun is nowhere;
 	say "you drink [noun].".
 		
+report drinking:
+	say "Refreshing and satisfying!".
 
+praying is an action applying to nothing. 
+understand "pray" and "worship" as praying.
+check praying:
+	if player is in oldChurch:
+		say "appropriate and peaceful.";
+		stop the action;
+		
+carry out praying:
+	say "No obvious or material changes are observed after you pray.".
+
+xyzzy is an action applying to nothing.
+understand "xyzzy" as xyzzy.
+check xyzzy:
+	if player is in insidePasture:
+		say "Gentle and comforting swirling blue lights surround you. The lights move like a rotating helix around your body.  As your feet leave the ground, you feel a distinct warmth around you, which becomes warmer. The lights become very bright until you can no longer open your eyes.";
+		stop the action.
+	
+
+
+carry out xyzzy: 
+	say "Nothing happens.".
 
 The player is wearing denim jeans.
 The player is wearing a comfortable old shirt.
@@ -199,3 +222,10 @@ instead of eating fruit:
 	say "Delicious! You can't recall the last time you tasted such delicious fruit.".
 
 [----priest npc code here---]
+
+
+fatherDrigi is a man in oldChurch. 
+the printed name of fatherDrigi is "Father Drigi".  
+fatherDrigi is proper-named.
+understand "man" and "priest" and "father" and "drigi" and "guy" and "pastor" as fatherDrigi.
+the description of fatherDrigi is "A tall, thin, expressionless priest. His movements and facial structure betray of profound rigidness. He looks at you down his nose at you.". 
