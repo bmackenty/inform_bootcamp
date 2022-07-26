@@ -2,6 +2,7 @@
 
 a thing can be examined or unexamined. 
 a thing is usually unexamined.
+
 carry out examining something:
 	now the noun is examined. 
 
@@ -56,8 +57,26 @@ An Open Field is a room.
 	An Old road is north of Open Field. 
 	A outsidePasture is east of Open Field. 
 	wildflower is scenery in Open Field.
-	the description of wildflower is  "Among the beautiful assortment of wildflowers, you spot Blue Wild Indigo (Baptisia australis),  Sweet Joe Pye Weed (Eutrochium purpureum), and Pale Purple Coneflower (Echinacea pallida). There are other wildflowers and grasses of course, but those are the one's you can identify.".
 	understand "flower" and "flowers" and "wild" and "wildflowers" as wildflower.
+
+instead of examining wildflower:
+	if wildflower is unexamined:
+		say  "Among the beautiful assortment of wildflowers, you spot Blue Wild Indigo (Baptisia australis),  Sweet Joe Pye Weed (Eutrochium purpureum), and Pale Purple Coneflower (Echinacea pallida). There are other wildflowers and grasses of course, but those are the one's you can easily identify.";
+		now the wildflower is examined;
+		stop the action;
+	else:
+		say "The wildflowers are beautiful. It is better to let them freely grow than be picked. Wildflowers are an import part of the natural ecosystem.".
+	
+dirtRoad is scenery in the open field. 
+understand "road" as dirtRoad.
+the printed name of dirtRoad is "old dirt road".
+instead of examining dirtRoad:
+	if dirtRoad is unexamined:
+		say "To the north you see an old dirt road. It has a strip of grass running down the middle. You think see some trees far in the distance to the north.";
+		now the dirtRoad is examined;
+		stop the action;
+	else:
+		say "The dirt road remains a dirt road, doing it's job as a dirt road. It was probably made many years ago.".
 
 The description of Open Field is "[if unvisited]You stand in a large grassy field dotted with wildflowers commonly found in rural New England during the summer. There is an old country road meandering to the north. To the east near the crest of a hill some animals peacefully graze within the confines of a pasture.
 
@@ -70,7 +89,7 @@ Instead of eating wildflower:
 	say "You attempt to chew and eat the wildflowers, however, since you are not a cow, your efforts are largely unsuccessful.";
 	now the description of the player is "Grass is stuck to and sticking out of many of your teeth. The effect is you now look like a horse / cow / farm animal with unbelievable  dental deficiency.".
 instead of taking wildflower:
-	say "Although tempting, you remember that nature is best left to herself, and the flowers should be enjoyed by everyone.". 
+	say "It is better to let them freely grow than be picked. Wildflowers are an import part of the natural ecosystem.". 
 	
 
 [========== pasture ==========]
@@ -232,7 +251,15 @@ instead of eating fruit:
 fatherDrigi is a man in oldChurch. 
 the printed name of fatherDrigi is "Father Drigi".  
 fatherDrigi is proper-named.
-understand "man" and "priest" and "father" and "drigi" and "guy" and "pastor" as fatherDrigi.
-the description of fatherDrigi is "A tall, thin, expressionless priest. His movements and facial structure betray of profound rigidness. He looks at you down his nose at you.". 
+understand "man" and "father drigi" and "priest" and "father" and "drigi" and "guy" and "pastor" as fatherDrigi.
 
+instead of examining fatherDrigi:
+	if unexamined:
+		say "A tall, thin, expressionless priest. His movements and facial structure betray a rigidness in his character. From behind a pair of round glasses, he looks down his nose at you.
+		
+		You could try talking to him.";
+		now fatherDrigi is examined;
+		stop the action;
+	else:
+		say "Not much has changed about Father Drigi since you last looked at him.". 
 
