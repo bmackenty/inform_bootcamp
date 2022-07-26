@@ -1,12 +1,36 @@
 "Yoke" by Bill MacKenty
 
-a thing can be examined or unexamined. 
-a thing is usually unexamined.
+[===== EXAMINE rules ======]
+	a thing can be examined or unexamined. 
+	a thing is usually unexamined.
+	
+	carry out examining something:
+		now the noun is examined. 
 
-carry out examining something:
-	now the noun is examined. 
+[===== TALKING rules ======]
+talking to is an action applying to one visible thing. 
+understand "talk to [someone]" and "speak to [someone]" and "converse with [someone]" as talking to.  
+Check talking to [something]:
+	if noun is not a person:
+		say "You attempt to talk with the [noun]. Perhaps you can find someone who can talk back?";
+		stop the action.
+Carry out talking to:
+	if noun is proper-named:
+		say "You chat away with [noun] for a while.";
+	else:
+		say "You chat with the [noun] for a while.".
+		
+	
+
+
+
+[===== TAKING rules ======]
 
 understand "pick [something]" and "grab [something]" as taking.
+
+
+[===== DRINKING rules ======]
+
 a thing can be undrinkable or drinkable.
 a thing is usually undrinkable. 
 
@@ -24,6 +48,8 @@ Carry out drinking:
 report drinking:
 	say "Refreshing and satisfying!".
 
+[===== PRAYING rules ======]
+
 praying is an action applying to nothing. 
 understand "pray" and "worship" as praying.
 check praying:
@@ -34,6 +60,8 @@ check praying:
 carry out praying:
 	say "No obvious or material changes are observed after you pray.".
 
+[===== XYZZY rules ======]
+
 xyzzy is an action applying to nothing.
 understand "xyzzy" as xyzzy.
 check xyzzy:
@@ -41,10 +69,12 @@ check xyzzy:
 		say "Gentle and comforting swirling blue lights surround you. The lights move like a rotating helix around your body.  As your feet leave the ground, you feel a distinct warmth around you, which becomes warmer. The lights become very bright until you can no longer open your eyes.";
 		stop the action.
 	
-
-
 carry out xyzzy: 
 	say "Nothing happens.".
+
+
+[===== Initial inventory ======]
+
 
 The player is wearing denim jeans.
 The player is wearing a comfortable old shirt.
@@ -111,10 +141,11 @@ instead of going nowhere in outsidePasture:
 	The description of the old large bench is "The old workbench looks to have once been used to hold tools and equipment to work on the massive fence which surrounds the pasture. There is a large wooden crate on top of the workbench and many rusty old tools.".
 
 	a key unlocks the large wooden crate.
+	The description of key is "A brass key with".
 	tools are scenery container on old bench. 
 	Understand "tools" and "rusty tools" and "old tools" and "useless tools" as tools.
 	instead of examining tools for the first time:
-		say "There is large pile of rusty carpentry tools. Hammers, saw, pliers, squares, and files - all rusty and useless. As you look through the large pile of rusty useless tools you realize it certainly isn't worth looking through the tools again.";
+		say "There is large pile of rusty carpentry tools. Hammers, saws, pliers, squares, and files - all rusty and useless. As you look through the large pile of rusty useless tools you realize it certainly isn't worth looking through the tools again.";
 		stop the action. 
 		
 	instead of examining the tools for the second time:
@@ -263,3 +294,13 @@ instead of examining fatherDrigi:
 	else:
 		say "Not much has changed about Father Drigi since you last looked at him.". 
 
+instead of talking to fatherDrigi:
+	say "Father Drigi doesn't seem interested in chit chat. Perhaps if you asked him something specific he might reply.".
+
+instead of giving glass to fatherDrigi: 
+	say "Father Drigi sniffs and curtly says 'I certainly don't need that glass! If you don't want it leave it in the church for a good Christian!'.";
+	stop the action.
+
+instead of giving something to fatherDrigi:
+	say "Father Drigi arches an eyebrow and dismissively waves his hand. He curtly says 'I dont need that.' and looks away.";
+	stop the action.
