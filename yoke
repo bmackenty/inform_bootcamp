@@ -132,7 +132,7 @@ instead of taking wildflower:
 	
 
 [========== pasture ==========]
-The description of outsidePasture is "[if unvisited]You stand outside a large pasture ringed by an old split-rail wooden fence. There is a gate to the north. There are several large oxen in the pasture - grazing, using their tails to shoo away flies, or simply laying on the ground. 
+The description of outsidePasture is "[if unvisited]You stand outside a large pasture ringed by an old split-rail wooden fence. There are several large oxen in the pasture - grazing, using their tails to shoo away flies, or simply laying on the ground. 
 
 To the west you can see an open bucolic field. You can enter the pasture. [else]Returning to the pasture, you see several oxen lazily grazing. You can enter the pasture.[end if]
 
@@ -157,7 +157,7 @@ instead of going nowhere in outsidePasture:
 	The description of the old large bench is "The old workbench looks to have once been used to hold tools and equipment to work on the massive fence which surrounds the pasture. There is a large wooden crate on top of the workbench and many rusty old tools.".
 
 	a key unlocks the large wooden crate.
-	The description of key is "A brass key with".
+	The description of key is "A brass key with a large paper tag attached; it reads 'for the crate'.".
 	tools are scenery container on old bench. 
 	Understand "tools" and "rusty tools" and "old tools" and "useless tools" as tools.
 	instead of examining tools for the first time:
@@ -165,11 +165,11 @@ instead of going nowhere in outsidePasture:
 		stop the action. 
 		
 	instead of examining the tools for the second time:
-		say "Not much has changed since you first looked through the tools. The oxen, watching you look through the rusty tools, seem grateful this is your last and final time searching through the tools. Although fairly hard to read the emotional cues from oxen,  you are pretty sure they are relieved you have finally finished searching through the tools. You start to feel relaxed and spirtually fulfilled knowing there isn't anything else to see in the pile of rusty tools.";
+		say "Not much has changed since you first looked through the tools. Although it is fairly hard to read the emotional cues from oxen,  you are pretty sure they are relieved you have finally finished searching through the tools. Just like when you first looked through the tools, it doesn't seem like it is worth looking through the tools again.";
 		stop the action.
 		
 	instead of examining the tools for the third time:
-		say "Fine. You win. As you poke around the rusty tools, you can't help but notice an elegantly made key. You've never seen a key like this before, and can't image what sort of lock it might fit. ";
+		say "As you poke around the rusty tools, you can't help but notice an elegantly made key. You've never seen a key like this before, and can't image what sort of lock it might fit. ";
 		now the key is in the tools;
 		stop the action.
 		
@@ -211,13 +211,20 @@ the description of inFence is "The old wooden split-rail fence is in fair condit
 
 An ox is in the insidePasture.
 An ox is scenery.
+the description of ox is "This adult ox is massive; easily in excess of 1000 kilograms. It looks attentively at you as it slowly chews.".
+
 
 instead of taking ox:
-	end the story finally saying "As you attempt to pick up the 1000kg ox, you learn a painful, final and important lesson about the personal boundaries of an ox, anger, physics, mass, and sharp horns.
+	end the story finally saying "As you attempt to pick up the ox, you learn a painful, final and important lesson about the personal boundaries of an ox.
 	
-	As if we need to discuss this further, you have died. 
+		
+	As if we need to discuss this further, you have died.  I am afraid this wasn't an especially peaceful and gentle parting, but rather the complete opposite. 
 	
-	There was this whole 'getting mauled and stomped on' thing, but that's really not important now, is it?".
+	
+	Entire books might be written about how un-peaceful and rather unpleasant your last few moments were.
+	
+	 
+	".
 
 [========== old road ==========]
 
