@@ -20,9 +20,6 @@ Carry out talking to:
 	else:
 		say "You chat with the [noun] for a while.".
 		
-	
-
-
 
 [===== TAKING rules ======]
 
@@ -53,12 +50,12 @@ report drinking:
 praying is an action applying to nothing. 
 understand "pray" and "worship" as praying.
 check praying:
-	if player is in oldChurch:
+	if player is in insideOldChurch:
 		say "appropriate and peaceful.";
 		stop the action;
 		
 carry out praying:
-	say "No obvious or material changes are observed after you pray.".
+	say "Nothing happens".
 
 [===== XYZZY rules ======]
 
@@ -66,8 +63,22 @@ xyzzy is an action applying to nothing.
 understand "xyzzy" as xyzzy.
 check xyzzy:
 	if player is in insidePasture:
-		say "Gentle and comforting swirling blue lights surround you. The lights move like a rotating helix around your body.  As your feet leave the ground, you feel a distinct warmth around you, which becomes warmer. The lights become very bright until you can no longer open your eyes.";
-		stop the action.
+		say "Gentle and comforting swirling blue lights surround you. The lights move like a rotating helix around your body.  As your feet leave the ground, you feel a distinct warmth around you, which becomes warmer. The lights become very bright until you can no longer open your eyes. You feel a heavy weight upon your neck and a stern, harsh voice says 'the yoke might be easy, the burden might be light, but it is still a yoke and burden...'.
+		
+		You are unsure how much time has passed, but you can not help but notice you have changed into an ox. ";
+		end the story finally saying "
+		
+		
+		
+		Be aware of the yokes you choose to wear. Not all are bad, not all burdens are necessary. 
+		
+		
+		
+		
+		
+		
+		".
+		
 	
 carry out xyzzy: 
 	say "Nothing happens.".
@@ -76,8 +87,8 @@ carry out xyzzy:
 [===== Initial inventory ======]
 
 
-The player is wearing denim jeans.
-The player is wearing a comfortable old shirt.
+The player is wearing comfortable denim jeans.
+The player is wearing a comfortable old linen shirt.
 The player is wearing a pair of sturdy boots.
 The player is wearing a straw hat.
 
@@ -109,8 +120,6 @@ instead of examining dirtRoad:
 		say "The dirt road remains a dirt road, doing it's job as a dirt road. It was probably made many years ago.".
 
 The description of Open Field is "[if unvisited]You stand in a large grassy field dotted with wildflowers commonly found in rural New England during the summer. There is an old country road meandering to the north. To the east near the crest of a hill some animals peacefully graze within the confines of a pasture.
-
-It is sunny and hot (28 degrees celcius).
 [else]A familiar field with an old country road to the north and a pasture to the east.
 ". 
 Instead of going nowhere in Open Field:
@@ -131,6 +140,13 @@ To the west you can see an open bucolic field. You can enter the pasture. [else]
 	[else]The oxen become curious and casually alert to your arrival. Some of them stop grazing and stare at you, while others adjust their ears to better detect the sounds you make. ".
 
 the printed name of outsidePasture is "Outside the pasture".
+
+[ ============== fence ========]
+
+fence is scenery in outsidePasture.
+the printed name of fence is "old wooden split-rail fence".
+understand "split rail fence" and "wooden fence" and "old fence"  and "fence" as fence.
+the description of fence is "The old wooden split-rail fence is in fair condition. There are no obvious missing sections, but it looks like it might only last another season. Remarkable is the size of the fence; it creates a huge pasture capable of comfortably holding many hundreds of farm animals. Currently, there are only oxen in the pasture.".
 
 instead of going nowhere in outsidePasture:
 	say "The fence blocks your path.".
@@ -172,11 +188,12 @@ instead of going nowhere in outsidePasture:
 
 [=== inside pasture ===]
 insidePasture is inside from outsidePasture. 
-The description of insidePasture is "You are standing in a large open pasture. An old wooden split-rail fence defines the boundary of the pasture. 
+The description of insidePasture is "You are standing inside a large open pasture. An old wooden split-rail fence defines the boundary of the pasture. 
 
 The oxen, curiousity piqued by your arrival outside of the pasture, take a decidedly more active interest in your presence inside the pasture. Some of the oxen stand up, others lift their noses to better smell you, and a few of them take a few tentative steps towards you. A few of the oxen think it better to take a few steps away from you.  All of the oxen are looking at you.
 
 You can exit the pasture.".
+
 
 fauxInsidePasture is a scenery, enterable container in outsidePasture. 
 the printed name of fauxInsidePasture is "Pasture".
@@ -187,11 +204,20 @@ understand "pasture" as fauxInsidePasture.
 instead of entering fauxInsidePasture:
 	try going inside.
 
+inFence is scenery in insidePasture.
+the printed name of inFence is "old wooden split-rail fence".
+understand "split rail fence" and "wooden fence" and "old fence" and "fence" as inFence.
+the description of inFence is "The old wooden split-rail fence is in fair condition. There are no obvious missing sections, but it looks like it might only last another season. Remarkable is the size of the fence; it creates a huge pasture capable of comfortably holding many hundreds of farm animals. Currently, there are only oxen (and you) inside the pasture.".
+
 An ox is in the insidePasture.
 An ox is scenery.
 
 instead of taking ox:
-	end the story finally saying "As you attempt to pick up the 1000kg ox, you learn a painful, final and important lesson about the personal boundaries of an ox, anger, physics, mass, and sharp horns.".
+	end the story finally saying "As you attempt to pick up the 1000kg ox, you learn a painful, final and important lesson about the personal boundaries of an ox, anger, physics, mass, and sharp horns.
+	
+	As if we need to discuss this further, you have died. 
+	
+	There was this whole 'getting mauled and stomped on' thing, but that's really not important now, is it?".
 
 [========== old road ==========]
 
@@ -209,16 +235,10 @@ A tree is in old road.
 A tree is scenery. 
 
 
-The description of the tree is  "This ancient tree is massive. It's branches extend broadly and fully, creating a comforting shade in the warm sun. A tree of this age is usually granted a name, but you are not sure what it might be.  Carefully looking at the bark you can't help but notice a small simple door inlaid into the tree. The door is quite small, and seems to be about 4 meters above ground.".
+The description of the tree is  "This ancient tree is massive. It's branches extend broadly and fully, creating a comforting shade in the warm sun. A tree of this age is usually granted a name, but you are not sure what it might be. ".
 
 instead of climbing the tree:
 	say "The tree is too difficult to climb.".
-
-
-[======== fairy house ===========]
-A czarodziejkaHouse is a room.
-The printed name of czarodziejkaHouse is "A place for the other folk.".
-
 
 
 [========== old church ==========]
